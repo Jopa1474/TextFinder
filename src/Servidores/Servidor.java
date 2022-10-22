@@ -1,5 +1,7 @@
 package Servidores;
 
+import GUI.GUICliente;
+
 import java.io.DataInputStream; //Se utiliza para comunicar los servidores
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class Servidor {
         DataOutputStream out;
 
         final int PUERTO = 4500;
+
+        GUICliente clienteFrame = new GUICliente();
 
         try {
             servidor = new ServerSocket(PUERTO);
