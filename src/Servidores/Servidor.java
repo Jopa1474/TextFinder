@@ -22,7 +22,7 @@ public class Servidor {
 
             while (true){
 
-                sc = servidor.accept();//devuelve el sohet del cliente
+                sc = servidor.accept();//devuelve el socket del cliente
                 System.out.println("Cliente conectado");
 
                 in = new DataInputStream(sc.getInputStream());

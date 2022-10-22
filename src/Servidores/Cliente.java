@@ -1,5 +1,7 @@
 package Servidores;
 
+import GUI.GUICliente;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class Cliente {
         DataInputStream in;
         DataOutputStream out;
 
+        GUICliente clienteFrame = new GUICliente();
 
         try {
             Socket sc = new Socket(HOST, PUERTO);
