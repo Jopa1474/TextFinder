@@ -14,18 +14,18 @@ public class GUICliente extends JFrame{
     DataInputStream in;
     DataOutputStream out;
     private JTextField txtCliente;
-    private JButton btnEnviar;
+    private JButton btnSeleccionar;
     private JPanel ClientPanel;
 
     public GUICliente() {
 
         setContentPane(ClientPanel);
         setTitle("Cliente");
-        setSize(900, 700);
+        setSize(500, 400);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
 
-        btnEnviar.addActionListener(new ActionListener() {
+        btnSeleccionar.addActionListener(new ActionListener() {
             /**
              *
              * @param e the event to be processed

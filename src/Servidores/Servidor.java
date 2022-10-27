@@ -1,6 +1,7 @@
 package Servidores;
 
 import GUI.GUICliente;
+import GUI.GUIServidor;
 
 import java.io.DataInputStream; //Se utiliza para comunicar los servidores
 import java.io.DataOutputStream;
@@ -18,7 +19,7 @@ public class Servidor {
 
         final int PUERTO = 4500;
 
-        GUICliente clienteFrame = new GUICliente();
+        //GUICliente clienteFrame = new GUICliente();
 
         try {
             servidor = new ServerSocket(PUERTO);
@@ -34,9 +35,11 @@ public class Servidor {
 
                 String mensaje = in.readUTF(); //se queda a la espera de que el cliente le mande algo
 
+                GUIServidor serverFrame = new GUIServidor();
+
                 System.out.println(mensaje);
 
-                out.writeUTF("Hola ANANANANNA");
+                out.writeUTF("Recibido");
 
                 sc.close(); //estoy cerrando el cliente, no el servidor
                 System.out.println("Cliente desconectado");
